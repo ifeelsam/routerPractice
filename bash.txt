@@ -1,0 +1,7 @@
+
+alias gc="git commit -m"
+alias gs="git status"
+alias gp="git push -u origin main"
+alias gpl="git pull"
+alias gco="git checkout"
+alias rmp="rm -rf"

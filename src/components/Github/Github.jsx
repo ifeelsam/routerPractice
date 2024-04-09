@@ -22,7 +22,12 @@ export default function Github() {
 }
 
 export const GitInfoLoader = async ({params}) => {
-  const id = params.id
+  
+  // const { id } = params; {both are same but we can destructure it}
+  const id = params.id;
+  // When you define a route with dynamic segments using the :paramName syntax,
+  // React Router captures the values of those dynamic segments 
+  // and makes them available through the params object.
   const response = await fetch(`https://api.github.com/users/${id}`)
   return response.json();
 }

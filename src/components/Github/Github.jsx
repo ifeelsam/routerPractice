@@ -5,10 +5,19 @@ export default function Github() {
   const data = useLoaderData();
   // const {id} = useParams()
   return (
-    <>
-      <h1> Github Followers: {data.followers}</h1>
-      <img src={data.avatar_url} width={300} />
-    </>
+  <div className="flex justify-center p-14 bg-gray-900">
+
+    <img className="flex-none rounded-full shadow-xl" src={data.avatar_url} width={300} />
+    
+    <div className="flex flex-col justify-center mx-14 text-white text-pretty text-4xl" >
+      <div className="flex flex-row-1"> Name: {data.name}</div>
+      <div> Github Username: {data.login}</div>
+      <div> Repos: {data.public_repos}</div>
+      <div> Followers: {data.followers}</div>
+      <div> Twitter: {data.twitter_username}</div>
+    </div>
+
+  </div>
   )
 }
 
